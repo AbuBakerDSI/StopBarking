@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # open a microphone in pyAudio and listen for taps
 import time
@@ -64,7 +64,7 @@ class TapTester(object):
         return stream
 
     def tapDetected(self):
-        print("Tap!")
+        print("Dog Bark Detected!")
         d=random.randint(0,len(a))
         f.write(dt.now().strftime("%d-%b-%Y (%H:%M:%S.%f)"+"\n"))
         b='mpg321 '+ "'" + a[d] +"'"
@@ -87,6 +87,6 @@ class TapTester(object):
 if __name__ == "__main__":
     tt = TapTester()
 
-    for i in range(1000):
+    while true:
         tt.listen()
 f.close()	
